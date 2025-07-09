@@ -1,0 +1,169 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.header {
+    width: 80px;
+    background-color: #fff;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    gap: 24px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.header img {
+    border-radius: 50%;
+    width: 46px;
+    height: 46px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    
+}
+
+.setting {
+    width: 48px;
+    height: 48px;
+}
+
+.page {
+    width: 80px;
+    height: 580px;
+    padding-left: 30px;
+
+
+}
+
+.page img {
+    width: 48px;
+    height: 48px;
+    padding-bottom: 20px;
+}
+
+.content {
+    margin-left: 80px;
+    margin-top: 64px;
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.image-scroll {
+    column-count: 4;
+    column-gap: 20px; /* wider gaps like Pinterest */
+    padding: 0;
+    margin: 0;
+}
+
+.image-scroll a {
+    display: inline-block;
+    width: 100%;
+    break-inside: avoid;
+    margin-bottom: 20px; /* more breathing room */
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.image-scroll a:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.image-scroll img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 0; /* let parent <a> control corners */
+}
+
+
+@media (max-width: 1200px) {
+    .image-scroll {
+        column-count: 3;
+    }
+}
+
+@media (max-width: 800px) {
+    .image-scroll {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 500px) {
+    .image-scroll {
+        column-count: 1;
+    }
+}
+
+
+
+.topnav {
+    position: fixed;
+    top: 0;
+    left: 80px; /* match your .header width */
+    height: 64px;
+    width: calc(100% - 80px);
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 999;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.topnav input[type="text"] {
+    flex: 1; 
+    max-width: 2000px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 14px;
+    outline: none;
+    margin-right: 16px;
+    min-width: 100px;
+}
+
+.topnav a img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    cursor: pointer;
+}
+
+@media (max-width: 500px) {
+    .topnav input[type="text"] {
+        max-width: 100%;
+        font-size: 12px;
+    }
+
+    .topnav {
+        padding: 0 10px;
+    }
+}
+
+
