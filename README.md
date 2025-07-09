@@ -9,7 +9,7 @@ A responsive **Pinterest UI clone** built with HTML and CSS. This project mimics
 - 💡 Clean, minimalist design
 
 ## 🔗 Live Demo
-👉 [View it on GitHub Pages]()
+👉 [View it on GitHub Pages](https://sakshib2003.github.io/pinterest-clone/)
 
 ## 🛠 Built With
 - HTML5
